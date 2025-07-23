@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Aventura - Classes de Heróis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗡️ Jogo de Aventura - Classes de Heróis</h1>
+            <p>Crie seus heróis e veja-os em ação!</p>
+        </header>
+
+        <div class="game-section">
+            <div class="hero-creation">
+                <h2>Criar Novo Herói</h2>
+                <form id="heroForm">
+                    <div class="form-group">
+                        <label for="heroName">Nome do Herói:</label>
+                        <input type="text" id="heroName" required placeholder="Digite o nome do herói" maxlength="20">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="heroAge">Idade:</label>
+                        <input type="number" id="heroAge" min="1" max="1000" required placeholder="Digite a idade">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="heroType">Tipo de Herói:</label>
+                        <select id="heroType" required>
+                            <option value="">Selecione um tipo</option>
+                            <option value="mago">🧙‍♂️ Mago</option>
+                            <option value="guerreiro">⚔️ Guerreiro</option>
+                            <option value="monge">🥋 Monge</option>
+                            <option value="ninja">🥷 Ninja</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit">Criar Herói</button>
+                </form>
+            </div>
+
+            <div class="heroes-list">
+                <h2>Seus Heróis (<span id="heroCount">0</span>)</h2>
+                <div id="heroesContainer">
+                    <p class="no-heroes">Nenhum herói criado ainda. Crie seu primeiro herói!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="battle-section">
+            <h2>Arena de Batalha</h2>
+            <div class="battle-controls">
+                <button id="attackAllBtn" disabled>⚔️ Todos Atacam!</button>
+                <button id="clearLogBtn">🗑️ Limpar Log</button>
+            </div>
+            <div id="battleLog" class="battle-log">
+                <p class="log-empty">Os ataques aparecerão aqui...</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2>Estatísticas</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total de Heróis</h3>
+                    <span id="totalHeroes">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Ataques Realizados</h3>
+                    <span id="totalAttacks">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Tipo Mais Comum</h3>
+                    <span id="mostCommonType">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-management-section">
+            <h2>Gerenciamento de Dados</h2>
+            <div class="data-controls">
+                <button id="saveBtn" class="save-btn">💾 Salvar Manualmente</button>
+                <button id="exportBtn" class="export-btn">📤 Exportar Backup</button>
+                <button id="clearDataBtn" class="clear-data-btn">🗑️ Limpar Todos os Dados</button>
+            </div>
+            <div class="save-status" id="saveStatus">
+                <span class="save-indicator" id="saveIndicator">●</span>
+                <span id="saveText">Carregando...</span>
+            </div>
+            <div class="data-info">
+                <p><strong>💡 Dica:</strong> Seus heróis são salvos automaticamente no navegador!</p>
+                <p><strong>📊 Última atualização:</strong> <span id="lastSave">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
