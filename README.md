@@ -34,10 +34,10 @@ Este projeto foi desenvolvido como uma demonstração prática dos conceitos fun
 
 | Classe | Ícone | Ataque Especial |
 |--------|-------|-----------------|
-| **Mago** | 🧙‍♂️ | Usou magia |
-| **Guerreiro** | ⚔️ | Usou espada |
-| **Monge** | 🥋 | Usou artes marciais |
-| **Ninja** | 🥷 | Usou shuriken |
+| **Mago** | 🧙‍♂️ | magia |
+| **Guerreiro** | ⚔️ | espada |
+| **Monge** | 🥋 | artes marciais |
+| **Ninja** | 🥷 | shuriken |
 
 ## 🛠️ Tecnologias Utilizadas
 
