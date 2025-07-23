@@ -70,7 +70,6 @@ Classe Heroi {
 ### 1. Clone o Repositório
 ```bash
 git clone https://github.com/Marcuslaf/classes_de_herios.git
-cd classes
 ```
 
 ### 2. Abra o Jogo
